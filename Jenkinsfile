@@ -2,21 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Building from Git repo...'
+                bat 'docker build -t jenkins-demo-app .'
             }
         }
 
-        stage('Test') {
+        stage('Run Docker Container') {
             steps {
-                echo 'Running tests...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
+                bat 'docker rm -f jenkins-demo-container || exit 0'
+                bat 'docker run -d --name jenkins-demo-container -p 9090:80 jenkins-demo-app'
             }
         }
     }
