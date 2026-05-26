@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DevOps Learning Journey</title>
+  <title>Prabhat Ranjan | DevOps Learning Journey</title>
 
   <style>
     * {
@@ -14,37 +14,39 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b, #0369a1);
-      color: #ffffff;
+      background: linear-gradient(135deg, #020617, #0f172a, #0369a1);
+      color: white;
       min-height: 100vh;
     }
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 60px 20px;
     }
 
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
-    .badge {
+    .tag {
       display: inline-block;
-      padding: 8px 18px;
+      padding: 10px 22px;
       border-radius: 30px;
-      background: rgba(255, 255, 255, 0.15);
-      color: #bae6fd;
+      background: rgba(255,255,255,0.12);
+      color: #7dd3fc;
       font-size: 14px;
-      margin-bottom: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255,255,255,0.15);
     }
 
     h1 {
-      font-size: 52px;
-      margin-bottom: 20px;
+      font-size: 58px;
       line-height: 1.2;
+      margin-bottom: 25px;
     }
 
     .highlight {
@@ -52,174 +54,228 @@
     }
 
     .subtitle {
-      font-size: 20px;
-      color: #dbeafe;
-      max-width: 760px;
+      max-width: 850px;
       margin: auto;
-      line-height: 1.7;
+      font-size: 20px;
+      line-height: 1.8;
+      color: #dbeafe;
+    }
+
+    .name {
+      margin-top: 25px;
+      font-size: 22px;
+      color: #facc15;
+      font-weight: bold;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+      margin-top: 70px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 18px;
-      padding: 26px;
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.10);
+      border-radius: 22px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.15);
       transition: 0.3s ease;
+      backdrop-filter: blur(8px);
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.16);
     }
 
     .card h3 {
-      font-size: 22px;
+      font-size: 24px;
+      margin-bottom: 14px;
       color: #7dd3fc;
-      margin-bottom: 12px;
     }
 
     .card p {
-      color: #e0f2fe;
-      line-height: 1.6;
       font-size: 15px;
-    }
-
-    .cert-section {
-      margin-top: 60px;
-      background: rgba(15, 23, 42, 0.75);
-      border-radius: 24px;
-      padding: 40px;
-      text-align: center;
-      border: 1px solid rgba(125, 211, 252, 0.3);
-    }
-
-    .cert-section h2 {
-      font-size: 34px;
-      margin-bottom: 15px;
-      color: #facc15;
-    }
-
-    .cert-section p {
-      font-size: 18px;
-      color: #e0f2fe;
       line-height: 1.7;
+      color: #e2e8f0;
     }
 
-    .footer {
+    .journey {
+      margin-top: 80px;
+      background: rgba(15,23,42,0.85);
+      border-radius: 28px;
+      padding: 50px;
       text-align: center;
-      margin-top: 50px;
-      color: #cbd5e1;
-      font-size: 14px;
+      border: 1px solid rgba(56,189,248,0.25);
+    }
+
+    .journey h2 {
+      font-size: 40px;
+      color: #facc15;
+      margin-bottom: 20px;
+    }
+
+    .journey p {
+      font-size: 19px;
+      line-height: 1.9;
+      color: #dbeafe;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .flow {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #7dd3fc;
+      line-height: 2;
+      font-weight: bold;
     }
 
     .button {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 28px;
-      border-radius: 30px;
+      margin-top: 35px;
+      padding: 16px 34px;
+      border-radius: 35px;
+      text-decoration: none;
       background: #38bdf8;
       color: #082f49;
-      text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
+      font-size: 16px;
     }
 
     .button:hover {
       background: #7dd3fc;
       transform: scale(1.05);
     }
+
+    .footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .footer span {
+      color: #facc15;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 
 <body>
+
   <div class="container">
+
     <section class="hero">
-      <div class="badge">DevOps Learning Lab</div>
+
+      <div class="tag">
+        DevOps • Cloud • Automation • Learning Journey
+      </div>
 
       <h1>
-        Building Real Skills in
-        <span class="highlight">Jenkins, GitOps & Cloud</span>
+        Mastering
+        <span class="highlight">Jenkins, GitOps, Helm & Cloud</span>
       </h1>
 
       <p class="subtitle">
-        This page is created for learning and practicing real DevOps concepts:
-        CI/CD pipelines, Docker deployment, GitOps workflow, Helm charts,
-        ArgoCD automation, CloudBees Jenkins, and Azure cloud certification preparation.
+        A professional hands-on DevOps learning environment focused on
+        real CI/CD pipelines, Docker deployment, GitOps workflows,
+        Kubernetes automation, Helm 3 packaging, ArgoCD continuous delivery,
+        CloudBees enterprise Jenkins, and Azure cloud technologies.
       </p>
 
-      <a href="#" class="button">Keep Learning. Keep Building.</a>
+      <div class="name">
+        Created by Prabhat Ranjan
+      </div>
+
+      <a href="#" class="button">
+        Building Real DevOps Skills
+      </a>
+
     </section>
 
     <section class="cards">
+
       <div class="card">
-        <h3>Jenkins</h3>
+        <h3>Jenkins CI/CD</h3>
         <p>
-          Learn how to create pipelines, pull code from GitHub, build Docker images,
-          and deploy applications automatically.
+          Building automated pipelines that pull source code from GitHub,
+          create Docker images, and deploy applications automatically.
         </p>
       </div>
 
       <div class="card">
         <h3>GitOps</h3>
         <p>
-          Understand how Git can become the single source of truth for deployments,
-          infrastructure changes, and release management.
+          Learning modern deployment strategies where Git repositories
+          become the central source of truth for infrastructure and deployment.
         </p>
       </div>
 
       <div class="card">
         <h3>Helm 3</h3>
         <p>
-          Package Kubernetes applications using Helm charts and manage deployments
-          in a clean, reusable, and production-friendly way.
+          Managing Kubernetes applications efficiently using reusable Helm charts
+          for scalable and production-ready deployments.
         </p>
       </div>
 
       <div class="card">
         <h3>ArgoCD</h3>
         <p>
-          Practice continuous delivery using ArgoCD and learn how Kubernetes clusters
-          can automatically sync with Git repositories.
+          Understanding continuous delivery for Kubernetes clusters using
+          automated synchronization directly from Git repositories.
         </p>
       </div>
 
       <div class="card">
         <h3>CloudBees</h3>
         <p>
-          Explore enterprise Jenkins concepts and understand how large organizations
-          manage CI/CD at scale.
+          Exploring enterprise-grade Jenkins architecture and advanced CI/CD
+          management used by large-scale organizations.
         </p>
       </div>
 
       <div class="card">
         <h3>Azure Cloud</h3>
         <p>
-          Build cloud knowledge using Azure virtual machines, networking,
-          deployment, monitoring, and certification preparation.
+          Practicing Azure Virtual Machines, networking, deployment automation,
+          monitoring, and cloud-native DevOps integration.
         </p>
       </div>
+
     </section>
 
-    <section class="cert-section">
-      <h2>Certification Goal: Azure 103</h2>
+    <section class="journey">
+
+      <h2>Azure 103 Certification Goal</h2>
+
       <p>
-        Complete Azure 103 certification preparation as part of this learning journey.
-        The goal is to connect DevOps tools with real cloud infrastructure and understand
-        how applications are built, deployed, and managed in cloud environments.
+        This environment is part of the personal DevOps and Cloud learning journey
+        of Prabhat Ranjan to gain strong practical expertise in modern cloud platforms,
+        CI/CD automation, Kubernetes deployment strategies, and enterprise DevOps tools.
       </p>
+
+      <div class="flow">
+        GitHub → Jenkins → Docker → Kubernetes → GitOps → Cloud
+      </div>
+
+      <a href="#" class="button">
+        Continuous Learning Never Stops
+      </a>
+
     </section>
 
     <div class="footer">
-      Created for learning Jenkins, Docker, GitOps, Helm 3, ArgoCD, CloudBees and Azure Cloud.
+      Designed and maintained by <span>Prabhat Ranjan</span><br>
+      DevOps • Cloud • Automation • CI/CD • Kubernetes
     </div>
+
   </div>
+
 </body>
 </html>
