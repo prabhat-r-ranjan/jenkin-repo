@@ -1,7 +1,225 @@
-<h1>Hello from Jenkins Auto Trigger</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Learning Journey</title>
 
-<h2> after jenkin setup </h2>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
 
-<h3> third time esting </h3>
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b, #0369a1);
+      color: #ffffff;
+      min-height: 100vh;
+    }
 
-<h4> Fourth test </h4>
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #bae6fd;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .highlight {
+      color: #38bdf8;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #dbeafe;
+      max-width: 760px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 26px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      color: #7dd3fc;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #e0f2fe;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .cert-section {
+      margin-top: 60px;
+      background: rgba(15, 23, 42, 0.75);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      border: 1px solid rgba(125, 211, 252, 0.3);
+    }
+
+    .cert-section h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      color: #facc15;
+    }
+
+    .cert-section p {
+      font-size: 18px;
+      color: #e0f2fe;
+      line-height: 1.7;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      background: #38bdf8;
+      color: #082f49;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #7dd3fc;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="badge">DevOps Learning Lab</div>
+
+      <h1>
+        Building Real Skills in
+        <span class="highlight">Jenkins, GitOps & Cloud</span>
+      </h1>
+
+      <p class="subtitle">
+        This page is created for learning and practicing real DevOps concepts:
+        CI/CD pipelines, Docker deployment, GitOps workflow, Helm charts,
+        ArgoCD automation, CloudBees Jenkins, and Azure cloud certification preparation.
+      </p>
+
+      <a href="#" class="button">Keep Learning. Keep Building.</a>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Jenkins</h3>
+        <p>
+          Learn how to create pipelines, pull code from GitHub, build Docker images,
+          and deploy applications automatically.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>GitOps</h3>
+        <p>
+          Understand how Git can become the single source of truth for deployments,
+          infrastructure changes, and release management.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Helm 3</h3>
+        <p>
+          Package Kubernetes applications using Helm charts and manage deployments
+          in a clean, reusable, and production-friendly way.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>ArgoCD</h3>
+        <p>
+          Practice continuous delivery using ArgoCD and learn how Kubernetes clusters
+          can automatically sync with Git repositories.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>CloudBees</h3>
+        <p>
+          Explore enterprise Jenkins concepts and understand how large organizations
+          manage CI/CD at scale.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Azure Cloud</h3>
+        <p>
+          Build cloud knowledge using Azure virtual machines, networking,
+          deployment, monitoring, and certification preparation.
+        </p>
+      </div>
+    </section>
+
+    <section class="cert-section">
+      <h2>Certification Goal: Azure 103</h2>
+      <p>
+        Complete Azure 103 certification preparation as part of this learning journey.
+        The goal is to connect DevOps tools with real cloud infrastructure and understand
+        how applications are built, deployed, and managed in cloud environments.
+      </p>
+    </section>
+
+    <div class="footer">
+      Created for learning Jenkins, Docker, GitOps, Helm 3, ArgoCD, CloudBees and Azure Cloud.
+    </div>
+  </div>
+</body>
+</html>
