@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-learning-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-learning-app
+  template:
+    metadata:
+      labels:
+        app: devops-learning-app
+    spec:
+      containers:
+        - name: devops-learning-app
+          image: prabhran/my-demo-app:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

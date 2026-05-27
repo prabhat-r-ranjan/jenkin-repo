@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Docker Image') {
+            steps {
+                bat 'docker build -t my-demo-app:latest -f docker/Dockerfile .'
+            }
+        }
+
+        stage('Tag Docker Image') {
+            steps {
+                bat 'docker tag my-demo-app:latest prabhran/my-demo-app:latest'
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                bat 'docker push prabhran/my-demo-app:latest'
+            }
+        }
+    }
+}
