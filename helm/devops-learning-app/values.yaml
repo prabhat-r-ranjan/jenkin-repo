@@ -1,0 +1,16 @@
+namespace: dev
+replicaCount: 1 
+image:
+  repository: prabhran/my-demo-app
+  pullPolicy: Always
+  tag: latest
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+  nodePort: 30090
+
+container:
+    port: 80
+    
