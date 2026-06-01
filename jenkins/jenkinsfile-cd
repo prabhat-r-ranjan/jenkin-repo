@@ -2,11 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Deploy to Kubernetes') {
+        stage('Deploy to Kubernetes using Helm') {
             steps {
-                bat 'kubectl apply -f k8s/deployment.yaml'
-                bat 'kubectl apply -f k8s/service.yaml'
-                bat 'kubectl rollout restart deployment devops-learning-app -n dev'
+                bat 'helm upgrade --install devops-learning-app ./helm/devops-learning-app -n dev'
             }
         }
     }
