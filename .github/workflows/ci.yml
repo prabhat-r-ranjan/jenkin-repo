@@ -13,3 +13,14 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t my-demo-app -f docker/Dockerfile .
+
+      - name: Run Docker container
+        run: docker run -d -p 8080:80 --name my-demo-app-container my-demo-app
+
+      - name: Verify application is running
+        run: |
+          sleep 5
+          curl -f http://localhost:8080 || exit 1
+      
+      - name: Success message
+        run: echo "Application is running successfully!"
