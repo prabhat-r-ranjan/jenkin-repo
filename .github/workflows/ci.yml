@@ -7,20 +7,37 @@ jobs:
   hello:
     runs-on: ubuntu-latest
 
+    env:
+      IMAGE_NAME: prabhran/my-demo-app
+      IMAGE_TAG: ${{ github.sha }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t my-demo-app -f docker/Dockerfile .
+        run: |
+          docker build -t $IMAGE_NAME:$IMAGE_TAG -f docker/Dockerfile .
 
       - name: Run Docker container
-        run: docker run -d -p 8080:80 --name my-demo-app-container my-demo-app
+        run: |
+          docker run -d --name demo-app -p 8080:80 $IMAGE_NAME:$IMAGE_TAG
 
-      - name: Verify application is running
+      - name: Verify container is running
+        run: |
+          docker ps
+
+      - name: Test application
         run: |
           sleep 5
-          curl -f http://localhost:8080 || exit 1
-      
-      - name: Success message
-        run: echo "Application is running successfully!"
+          curl -f http://localhost:8080
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Push Docker image
+        run: |
+          docker push $IMAGE_NAME:$IMAGE_TAG
