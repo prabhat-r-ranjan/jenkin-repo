@@ -8,4 +8,4 @@ resources:
 
 images:
   - name: prabhran/my-demo-app
-    newTag: latest
+    newTag: 54649981500f864bca72c2733a4096903dfa88dc
