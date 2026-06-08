@@ -9,8 +9,8 @@ jobs:
 
     env:
       IMAGE_NAME: prabhran/my-demo-app
-      IMAGE_TAG: ${{ github.sha }}
-
+      # IMAGE_TAG: ${{ github.sha }}
+      IMAGE_TAG: latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
