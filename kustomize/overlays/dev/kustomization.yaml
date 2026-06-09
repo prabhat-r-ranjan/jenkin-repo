@@ -6,6 +6,9 @@ namespace: dev
 resources:
   - ../../base
 
+commonAnnotations:
+  buildTime: "test-001"
+
 images:
   - name: prabhran/my-demo-app
     newTag: latest
